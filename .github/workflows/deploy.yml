@@ -18,13 +18,27 @@ jobs:
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
-      - name: Deploy to Cloud Run
-        id: deploy
+      - name: Deploy Analyzer to Cloud Run
+        id: deploy-analyzer
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: apk-analyzer-service
+          region: us-central1
+          source: ./analyzer
+          flags: '--allow-unauthenticated'
+
+      - name: Deploy Frontend to Cloud Run
+        id: deploy-frontend
         uses: google-github-actions/deploy-cloudrun@v2
         with:
           service: cyber-ai-course
           region: us-central1
           source: ./
+          env_vars: |-
+            ANALYZER_URL=${{ steps.deploy-analyzer.outputs.url }}/analyze
+          flags: '--allow-unauthenticated'
 
       - name: Show Output URL
-        run: echo "Deployed URL - ${{ steps.deploy.outputs.url }}"
+        run: |
+          echo "Analyzer URL - ${{ steps.deploy-analyzer.outputs.url }}"
+          echo "Frontend URL - ${{ steps.deploy-frontend.outputs.url }}"

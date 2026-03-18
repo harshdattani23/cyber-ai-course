@@ -2,8 +2,13 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
+const { Storage } = require('@google-cloud/storage');
+const crypto = require('crypto');
 
 const app = express();
+app.use(express.json());
+const storage = new Storage();
+const bucketName = 'cybersentry-app-apks';
 const PORT = process.env.PORT || 3000;
 
 // Serve static files (like the index.html)
@@ -169,6 +174,7 @@ const renderLesson = (contentHtml, title, currentModuleNum) => {
                 <a href="/course/module-3" class="sidebar-link ${currentModuleNum === 3 ? 'active' : ''}">03. Specialized AI Tools</a>
                 <a href="/course/module-4" class="sidebar-link ${currentModuleNum === 4 ? 'active' : ''}">04. Mobile APK Analysis</a>
                 <a href="/course/module-5" class="sidebar-link ${currentModuleNum === 5 ? 'active' : ''}">05. Custom Deployed Solutions</a>
+                <a href="/analyzer" class="sidebar-link ${currentModuleNum === 6 ? 'active' : ''}" style="color: var(--accent-purple); font-weight: 600; margin-top: 1rem; border: 1px solid var(--accent-purple);">✨ APK AI Analyzer</a>
             </nav>
         </aside>
     </div>
@@ -178,6 +184,124 @@ const renderLesson = (contentHtml, title, currentModuleNum) => {
 </html>
 `;
 };
+
+// Generate Signed URL for APK Upload
+app.get('/api/upload-url', async (req, res) => {
+    try {
+        const fileId = crypto.randomBytes(16).toString('hex');
+        const fileName = `${fileId}.apk`;
+        const options = {
+            version: 'v4',
+            action: 'write',
+            expires: Date.now() + 15 * 60 * 1000, // 15 mins
+            contentType: 'application/octet-stream',
+        };
+        const [url] = await storage.bucket(bucketName).file(fileName).getSignedUrl(options);
+        res.json({ url, fileId });
+    } catch (e) {
+        console.error('Upload URL Error:', e);
+        res.status(500).json({ error: 'Failed to generate signed url' });
+    }
+});
+
+// Trigger Analysis on Cloud Run Service
+app.post('/api/analyze', async (req, res) => {
+    try {
+        const { fileId } = req.body;
+        const analyzerUrl = process.env.ANALYZER_URL || 'http://localhost:8080/analyze'; 
+        const response = await fetch(analyzerUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ fileId, bucket: bucketName })
+        });
+        const data = await response.json();
+        res.json(data);
+    } catch(e) {
+        console.error('Analyze trigger error:', e);
+        res.status(500).json({ error: e.message });
+    }
+});
+
+// Serve the APK Analyzer Page
+app.get('/analyzer', (req, res) => {
+    const html = `
+    <h1>APK AI Analyzer</h1>
+    <p>Upload your compiled Android application (.apk) for static security analysis using Gemini AI. We will decompile your application and scan it for vulnerabilities.</p>
+    <div style="border: 2px dashed var(--border-color); padding: 3rem; text-align: center; border-radius: 12px; margin: 2rem 0; background: rgba(88, 166, 255, 0.05);" id="upload-box">
+        <input type="file" id="apk-file" accept=".apk" style="display:none;" />
+        <button class="nav-btn glow-bg" style="font-size: 1.1rem; padding: 0.8rem 1.5rem;" onclick="document.getElementById('apk-file').click()">Select APK File</button>
+        <p style="margin-top: 1rem; color: var(--text-secondary);" id="file-name-display">No file selected.</p>
+        <button class="nav-btn" style="margin-top: 1rem; display:none; border-color: var(--accent-purple); color: var(--accent-purple);" id="upload-btn" onclick="startUpload()">Upload & Analyze</button>
+    </div>
+    
+    <div id="status-container" style="display:none; padding: 1.5rem; background: var(--surface-color); border: 1px left solid var(--accent-purple); border-radius: 8px;">
+        <h3>Analysis Status</h3>
+        <p id="status-text" style="color: var(--accent-cyan); font-weight: 600;">Initializing upload...</p>
+        <div id="result-container" style="margin-top: 1.5rem; white-space: pre-wrap; word-wrap: break-word; font-family: ui-monospace, SFMono-Regular, monospace; font-size: 0.9em; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 6px; display: none;"></div>
+    </div>
+    
+    <script>
+        const fileInput = document.getElementById('apk-file');
+        const nameDisplay = document.getElementById('file-name-display');
+        const uploadBtn = document.getElementById('upload-btn');
+        const statusContainer = document.getElementById('status-container');
+        const statusText = document.getElementById('status-text');
+        const resultContainer = document.getElementById('result-container');
+        
+        fileInput.addEventListener('change', (e) => {
+            if(e.target.files.length > 0) {
+                nameDisplay.textContent = e.target.files[0].name;
+                uploadBtn.style.display = 'inline-block';
+            }
+        });
+
+        async function startUpload() {
+            const file = fileInput.files[0];
+            if(!file) return;
+            
+            uploadBtn.style.display = 'none';
+            statusContainer.style.display = 'block';
+            resultContainer.style.display = 'none';
+            
+            try {
+                statusText.textContent = "Obtaining secure upload link...";
+                const { url, fileId } = await fetch('/api/upload-url').then(res => res.json());
+                
+                statusText.textContent = "Uploading APK to Google Cloud Storage (might take a minute)...";
+                await fetch(url, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/octet-stream' },
+                    body: file
+                });
+                
+                statusText.textContent = "Upload complete. Extracting APK and running Gemini Analysis...";
+                const res = await fetch('/api/analyze', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ fileId })
+                });
+                
+                const data = await res.json();
+                
+                if (data.error) {
+                    statusText.textContent = "Analysis Failed: " + data.error;
+                    statusText.style.color = "#ff7b72";
+                } else {
+                    statusText.textContent = "Analysis Complete! ✨";
+                    statusText.style.color = "var(--accent-purple)";
+                    resultContainer.style.display = 'block';
+                    resultContainer.textContent = data.report || data.message || JSON.stringify(data, null, 2);
+                }
+                
+            } catch (e) {
+                statusText.textContent = "Error: " + e.message;
+                statusText.style.color = "#ff7b72";
+            }
+        }
+    </script>
+    `;
+    res.send(renderLesson(html, 'APK Analyzer', 6));
+});
 
 // Dynamic route for fetching MD files based on module ID
 app.get('/course/:moduleName', (req, res) => {

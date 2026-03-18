@@ -1,0 +1,14 @@
+{
+  "name": "apk-analyzer-service",
+  "version": "1.0.0",
+  "description": "Background worker for extracting APKs and sending to Gemini",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "@google-cloud/storage": "^7.12.0",
+    "@google-cloud/vertexai": "^1.1.0"
+  }
+}
