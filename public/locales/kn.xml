@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="nav_dashboard">← ಕೋರ್ಸ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್</string>
+    <string name="nav_module">ಮಾಡ್ಯೂಲ್</string>
+    <string name="nav_prev">← ಹಿಂದಿನ</string>
+    <string name="nav_next">ಮುಂದಿನ ಮಾಡ್ಯೂಲ್ →</string>
+    <string name="nav_finish">ಕೋರ್ಸ್ ಮುಗಿಸಿ 🎉</string>
+    
+    <string name="hero_tagline">ಸಮಗ್ರ ಮಾಸ್ಟರ್ ಕ್ಲಾಸ್</string>
+    <string name="hero_title">AI ಬಳಸಿ ಸೈಬರ್&lt;br&gt;ಅಪರಾಧಗಳನ್ನು ಪರಿಹರಿಸುವುದು</string>
+    <string name="hero_enter">ಕೋರ್ಸ್ ಪ್ರವೇಶಿಸಿ</string>
+    
+    <string name="curr_title">ಕೋರ್ಸ್ ಪಠ್ಯಕ್ರಮ</string>
+    <string name="sidebar_title">ಕೋರ್ಸ್ ಮಾಡ್ಯೂಲ್‌ಗಳು</string>
+    <string name="hero_desc">ಭವಿಷ್ಯದ ಸಾಧನಗಳನ್ನು ಕರಗತ ಮಾಡಿಕೊಳ್ಳಿ. ಅಸಂಗತತೆಗಳನ್ನು ಪತ್ತೆಹಚ್ಚಲು, ದುರುದ್ದೇಶಪೂರಿತ ಕೋಡ್ ಅನ್ನು ವಿಶ್ಲೇಷಿಸಲು ಮತ್ತು ಯಂತ್ರದ ವೇಗದಲ್ಲಿ ಘಟನೆಗಳ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ವೇಗಗೊಳಿಸಲು ಲಾರ್ಜ್ ಲ್ಯಾಂಗ್ವೇಜ್ ಮಾಡೆಲ್‌ಗಳನ್ನು (LLMs) ಬಳಸಿ.</string>
+    <string name="hero_coming_soon">ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ</string>
+    <string name="curr_subtitle">AI ಮೂಲಭೂತ ಅಂಶಗಳಿಂದ ಹಿಡಿದು ಪ್ರಾಯೋಗಿಕ SOC ಶಸ್ತ್ರಾಸ್ತ್ರೀಕರಣದವರೆಗೆ ಎಲ್ಲವನ್ನೂ ಒಳಗೊಂಡಿರುವ ಆಳವಾದ ಎಂಡ್-ಟು-ಎಂಡ್ ಮಾಡ್ಯೂಲ್‌ಗಳು.</string>
+
+    <string name="m1_title">AI ಮತ್ತು ಲಾರ್ಜ್ ಲ್ಯಾಂಗ್ವೇಜ್ ಮಾಡೆಲ್‌ಗಳ (LLMs) ಪರಿಚಯ</string>
+    <string name="m1_li1">&lt;strong&gt;ಮೂಲಭೂತ ಅಂಶಗಳು:&lt;/strong&gt; AI, ಮೆಷಿನ್ ಲರ್ನಿಂಗ್ (ML) ಮತ್ತು ಡೀಪ್ ಲರ್ನಿಂಗ್ (DL) ಅವಲೋಕನ.</string>
+    <string name="m1_li2">&lt;strong&gt;ಜನರೇಟಿವ್ AI ಮತ್ತು LLM ಗಳು:&lt;/strong&gt; ಮಾಡೆಲ್‌ಗಳು ಪಠ್ಯ, ಟೋಕನ್‌ಗಳು, ಸಂದರ್ಭ ಕಿಟಕಿಗಳು ಮತ್ತು ಟ್ರಾನ್ಸ್‌ಫಾರ್ಮರ್‌ಗಳನ್ನು ಹೇಗೆ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುತ್ತವೆ.</string>
+    <string name="m1_li3">&lt;strong&gt;ಪ್ರಾಂಪ್ಟ್ ಇಂಜಿನಿಯರಿಂಗ್ (Prompt Engineering) ಮೂಲಭೂತ ಅಂಶಗಳು:&lt;/strong&gt; AI ಮಾಡೆಲ್‌ಗಳೊಂದಿಗೆ ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಸಂವಹನ ನಡೆಸಲು ಉತ್ತಮ ಅಭ್ಯಾಸಗಳು.</string>
+
+    <string name="m2_title">ಫ್ರಾಂಟಿಯರ್ AI ಮಾಡೆಲ್‌ಗಳು ಮತ್ತು ಕಸ್ಟಮ್ ಅಸಿಸ್ಟೆಂಟ್‌ಗಳು</string>
+    <string name="m2_li1">&lt;strong&gt;ಇತ್ತೀಚಿನ ಫ್ಲ್ಯಾಗ್‌ಶಿಪ್ ಮಾಡೆಲ್‌ಗಳು:&lt;/strong&gt; ವಿಶ್ಲೇಷಣೆಗಾಗಿ ChatGPT (GPT-5.4), Gemini (3.1 Pro) ಮತ್ತು Grok (Grok 4.20) ಮಾಸ್ಟರ್ ಮಾಡುವುದು.</string>
+    <string name="m2_li2">&lt;strong&gt;NotebookLM:&lt;/strong&gt; ತ್ವರಿತ ಆಡಿಯೊ ಅವಲೋಕನಗಳು ಮತ್ತು AI ವಿಚಾರಣೆಗಳನ್ನು ರಚಿಸಲು ಕೇಸ್ ಫೈಲ್‌ಗಳು, FIR ಗಳು ಮತ್ತು ಲಾಗ್‌ಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡುವುದು.</string>
+    <string name="m2_li3">&lt;strong&gt;ಕಸ್ಟಮ್ GPT ಮತ್ತು Gems:&lt;/strong&gt; ನಿರ್ದಿಷ್ಟ ಸೈಬರ್ ರಕ್ಷಣಾ ಕಾರ್ಯಗಳಿಗಾಗಿ ವೈಯಕ್ತೀಕರಿಸಿದ, ವಿಶೇಷ AI ಏಜೆಂಟ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವುದು.</string>
+
+    <string name="m3_title">ಡೀಪ್‌ಫೇಕ್‌ಗಳು ಮತ್ತು AI-ನೆರವಿನ ಪತ್ತೆಹಚ್ಚುವಿಕೆ</string>
+    <string name="m3_li1">&lt;strong&gt;ಡೀಪ್‌ಫೇಕ್‌ಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು:&lt;/strong&gt; ಸೈಬರ್‌ಕ್ರೈಮ್‌ನಲ್ಲಿ AI-ಉತ್ಪಾದಿತ ಮುಖ ಬದಲಿ ಮತ್ತು ಧ್ವನಿ ಕ್ಲೋನಿಂಗ್ ಅನ್ನು ಹೇಗೆ ಶಸ್ತ್ರಾಸ್ತ್ರಗೊಳಿಸಲಾಗುತ್ತದೆ.</string>
+    <string name="m3_li2">&lt;strong&gt;ದೃಶ್ಯ ಅಸಂಗತತೆಗಳು:&lt;/strong&gt; ಅಸ್ವಾಭಾವಿಕ ಕಣ್ಣು ಮಿಟುಕಿಸುವುದು, ಬೆಳಕಿನ ಅಸಂಗತತೆಗಳು ಮತ್ತು ಮಸುಕಾದ ಅಂಚುಗಳನ್ನು ಗುರುತಿಸುವ ಸುಲಭ ವಿಧಾನಗಳು.</string>
+    <string name="m3_li3">&lt;strong&gt;AI ಪತ್ತೆ ಸಾಧನಗಳು:&lt;/strong&gt; ಮಾಧ್ಯಮದ ದೃಢೀಕರಣವನ್ನು ಪರಿಶೀಲಿಸಲು ಮತ್ತು ಮೂಲಗಳನ್ನು ಪತ್ತೆಹಚ್ಚಲು ಸುಲಭ ಲಭ್ಯವಿರುವ, ತಾಂತ್ರಿಕವಲ್ಲದ AI ಸಾಧನಗಳನ್ನು ಬಳಸುವುದು.</string>
+
+    <string name="m4_title">ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ (APK) ವಿಶ್ಲೇಷಣೆ</string>
+    <string name="m4_li1">&lt;strong&gt;ಅನ್‌ಜಿಪ್ ಟ್ರಿಕ್:&lt;/strong&gt; ವಿಶೇಷ ಸಾಫ್ಟ್‌ವೇರ್ ಇಲ್ಲದೆ ಗುಪ್ತ ವಿಷಯಗಳನ್ನು ಹೊರತೆಗೆಯಲು Android .apk ಫೈಲ್ ಅನ್ನು .zip ಗೆ ಮರುಹೆಸರಿಸುವುದು ಹೇಗೆ.</string>
+    <string name="m4_li2">&lt;strong&gt;ಕೋಡ್ ವಿಶ್ಲೇಷಣೆ:&lt;/strong&gt; ತ್ವರಿತ ಮಾಲ್‌ವೇರ್ ವಿಶ್ಲೇಷಣೆಗಾಗಿ ಹೊರತೆಗೆಯಲಾದ ಫೈಲ್‌ಗಳನ್ನು ನೇರವಾಗಿ Gemini ಗೆ ಅಪ್‌ಲೋಡ್ ಮಾಡುವುದು.</string>
+    <string name="m4_li3">&lt;strong&gt;ಬೆದರಿಕೆಗಳನ್ನು ಗುರುತಿಸುವುದು:&lt;/strong&gt; ಸ್ಪೈವೇರ್, ಗುಪ್ತ API ಗಳು ಮತ್ತು ದುರುದ್ದೇಶಪೂರಿತ ಅನುಮತಿಗಳನ್ನು ಪತ್ತೆಹಚ್ಚಲು AI ಗೆ ಸೂಚಿಸುವುದು.</string>
+
+    <string name="m5_title">IndiaAI ಮಿಷನ್ ಮತ್ತು Sarvam</string>
+    <string name="m5_li1">&lt;strong&gt;ಸಾರ್ವಭೌಮ AI (Sovereign AI):&lt;/strong&gt; ಸ್ಥಳೀಯ ಕಂಪ್ಯೂಟಿಂಗ್ ಶಕ್ತಿ ಮತ್ತು ಡೇಟಾಸೆಟ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವ IndiaAI ಮಿಷನ್‌ನ ಗುರಿಯನ್ನು ಅನ್ವೇಷಿಸುವುದು.</string>
+    <string name="m5_li2">&lt;strong&gt;Sarvam AI:&lt;/strong&gt; ಭಾರತೀಯ ಭಾಷೆಗಳಿಗಾಗಿ ನಿರ್ಮಿಸಲಾದ ಭಾರತದ ಅಡಿಪಾಯ ಮಾದರಿಗಳನ್ನು (Sarvam-105B) ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು.</string>
+    <string name="m5_li3">&lt;strong&gt;ಕಾನೂನು ಜಾರಿ ಬಳಕೆಯ ಪ್ರಕರಣಗಳು:&lt;/strong&gt; ಪ್ರಾದೇಶಿಕ ಧ್ವನಿ ಟಿಪ್ಪಣಿಗಳನ್ನು ಭಾಷಾಂತರಿಸುವುದು ಮತ್ತು ಸ್ಥಳೀಯ ಭಾಷೆಯ ಸೈಬರ್ ಕ್ರೈಮ್ FIR ಗಳನ್ನು ವಿಶ್ಲೇಷಿಸುವುದು.</string>
+</resources>

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solving Cyber Crime Using AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-color: #0a0a0f;
@@ -32,13 +35,15 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.15), transparent 25%),
                 radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.15), transparent 25%);
             background-attachment: fixed;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Outfit', sans-serif;
         }
 
@@ -203,7 +208,7 @@
             transform-origin: center;
             transition: transform 0.4s ease;
         }
-        
+
         .module-card.bg-right::before {
             left: auto;
             right: 0;
@@ -289,18 +294,22 @@
                 align-items: flex-start;
                 padding: 2rem;
             }
+
             .module-card.bg-right::before {
                 left: 0;
                 right: auto;
             }
+
             .module-number {
                 font-size: 4rem;
                 min-width: auto;
                 text-align: left;
             }
+
             .module-content {
                 order: 2 !important;
             }
+
             .module-number {
                 order: 1 !important;
             }
@@ -312,7 +321,7 @@
             background: #111116;
             border-radius: 12px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             overflow: hidden;
         }
 
@@ -335,9 +344,17 @@
             border-radius: 50%;
         }
 
-        .mac-btn.close { background: #ff5f56; }
-        .mac-btn.minimize { background: #ffbd2e; }
-        .mac-btn.maximize { background: #27c93f; }
+        .mac-btn.close {
+            background: #ff5f56;
+        }
+
+        .mac-btn.minimize {
+            background: #ffbd2e;
+        }
+
+        .mac-btn.maximize {
+            background: #27c93f;
+        }
 
         .terminal-title {
             margin-left: auto;
@@ -364,13 +381,25 @@
         }
 
         @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
         }
 
         @keyframes blink {
-            from, to { border-color: transparent }
-            50% { border-color: var(--accent-cyan) }
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--accent-cyan)
+            }
         }
 
         footer {
@@ -383,34 +412,50 @@
         }
     </style>
 </head>
+
 <body>
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000; background: rgba(10, 10, 15, 0.8); padding: 5px 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+        <select id="lang-switcher" onchange="changeLang(this.value)" style="background: transparent; color: var(--text-secondary); border: none; outline: none; font-family: inherit; font-size: 0.95rem; cursor: pointer;">
+            <option value="en" style="color:#000;">English</option>
+            <option value="hi" style="color:#000;">हिन्दी</option>
+            <option value="kn" style="color:#000;">ಕನ್ನಡ</option>
+        </select>
+    </div>
+    <script src="/i18n.js"></script>
 
     <section class="hero">
-        <div class="tagline">Comprehensive Masterclass</div>
-        <h1>Solving Cyber Crime<br>Using AI</h1>
-        <p>Master the tools of the future. Harness Large Language Models to detect anomalies, analyze malicious code, and accelerate incident response at machine speed.</p>
-        
+        <div class="tagline" data-i18n="hero_tagline">Comprehensive Masterclass</div>
+        <h1 data-i18n="hero_title">Solving Cyber Crime<br>Using AI</h1>
+        <p data-i18n="hero_desc">Master the tools of the future. Harness Large Language Models to detect anomalies, analyze malicious code,
+            and accelerate incident response at machine speed.</p>
+
         <div class="button-group">
-            <a href="/course/module-1" class="glow-button">Enter the Course</a>
-            <a href="#" class="glow-button secondary">Platform Coming Soon</a>
+            <a href="/course/module-1" class="glow-button" data-i18n="hero_enter">Enter the Course</a>
+            <a href="#" class="glow-button secondary" data-i18n="hero_coming_soon">Platform Coming Soon</a>
         </div>
     </section>
 
     <div class="container" id="curriculum">
-        <h2 class="section-title">Course Curriculum</h2>
-        <p class="section-subtitle">Deep end-to-end modules covering everything from AI fundamentals to practical SOC weaponization.</p>
-        
+        <h2 class="section-title" data-i18n="curr_title">Course Curriculum</h2>
+        <p class="section-subtitle" data-i18n="curr_subtitle">Deep end-to-end modules covering everything from AI fundamentals to practical SOC
+            weaponization.</p>
+
         <div class="curriculum-list">
-            
+
             <!-- Module 1 -->
             <div class="module-card">
                 <div class="module-number">01</div>
                 <div class="module-content">
-                    <h3><a href="/course/module-1" style="color: inherit; text-decoration: none; border-bottom: none;">Introduction to AI and Large Language Models</a></h3>
+                    <h3><a href="/course/module-1"
+                            style="color: inherit; text-decoration: none; border-bottom: none;" data-i18n="m1_title">Introduction to AI and
+                            Large Language Models</a></h3>
                     <ul>
-                        <li><strong>Fundamentals:</strong> Overview of AI, Machine Learning (ML), and Deep Learning (DL).</li>
-                        <li><strong>Generative AI & LLMs:</strong> How models process text, tokens, context windows, and transformers.</li>
-                        <li><strong>Prompt Engineering Basics:</strong> Best practices for communicating effectively with AI models.</li>
+                        <li data-i18n="m1_li1"><strong>Fundamentals:</strong> Overview of AI, Machine Learning (ML), and Deep Learning
+                            (DL).</li>
+                        <li data-i18n="m1_li2"><strong>Generative AI & LLMs:</strong> How models process text, tokens, context windows, and
+                            transformers.</li>
+                        <li data-i18n="m1_li3"><strong>Prompt Engineering Basics:</strong> Best practices for communicating effectively
+                            with AI models.</li>
                     </ul>
                 </div>
             </div>
@@ -418,11 +463,16 @@
             <!-- Module 2 -->
             <div class="module-card bg-right">
                 <div class="module-content" style="order: 1;">
-                    <h3><a href="/course/module-2" style="color: inherit; text-decoration: none; border-bottom: none;">The Evolving Landscape of AI Models</a></h3>
+                    <h3><a href="/course/module-2"
+                            style="color: inherit; text-decoration: none; border-bottom: none;" data-i18n="m2_title">The Evolving Landscape
+                            of AI Models</a></h3>
                     <ul>
-                        <li><strong>Model Types:</strong> Foundational vs. Fine-tuned, Open-source (Llama, Mistral) vs. Proprietary (GPT-4, Claude).</li>
-                        <li><strong>Major Companies:</strong> OpenAI (GPT), Google (Gemini), Anthropic (Claude), Meta (Llama).</li>
-                        <li><strong>Spotlight on Sarvam AI:</strong> India's prominent startup building Indic language models (OpenHathi) and voice-first GenAI capabilities.</li>
+                        <li data-i18n="m2_li1"><strong>Model Types:</strong> Foundational vs. Fine-tuned, Open-source (Llama, Mistral) vs.
+                            Proprietary (GPT-4, Claude).</li>
+                        <li data-i18n="m2_li2"><strong>Major Companies:</strong> OpenAI (GPT), Google (Gemini), Anthropic (Claude), Meta
+                            (Llama).</li>
+                        <li data-i18n="m2_li3"><strong>Spotlight on Sarvam AI:</strong> India's prominent startup building Indic language
+                            models (OpenHathi) and voice-first GenAI capabilities.</li>
                     </ul>
                 </div>
                 <div class="module-number" style="order: 2;">02</div>
@@ -432,11 +482,16 @@
             <div class="module-card">
                 <div class="module-number">03</div>
                 <div class="module-content">
-                    <h3><a href="/course/module-3" style="color: inherit; text-decoration: none; border-bottom: none;">Specialized AI Tools & OSINT</a></h3>
+                    <h3><a href="/course/module-3"
+                            style="color: inherit; text-decoration: none; border-bottom: none;" data-i18n="m3_title">Specialized AI Tools &
+                            OSINT</a></h3>
                     <ul>
-                        <li><strong>Google NotebookLM:</strong> Synthesizing complex PDFs and generating engaging "Audio Overviews."</li>
-                        <li><strong>Gemini Gems:</strong> Building custom, personalized expert AI assistants for repetitive security tasks.</li>
-                        <li><strong>Grok (by xAI):</strong> Leveraging real-time X (Twitter) data for Open Source Intelligence and tracking social engineering.</li>
+                        <li data-i18n="m3_li1"><strong>Google NotebookLM:</strong> Synthesizing complex PDFs and generating engaging "Audio
+                            Overviews."</li>
+                        <li data-i18n="m3_li2"><strong>Gemini Gems:</strong> Building custom, personalized expert AI assistants for
+                            repetitive security tasks.</li>
+                        <li data-i18n="m3_li3"><strong>Grok (by xAI):</strong> Leveraging real-time X (Twitter) data for Open Source
+                            Intelligence and tracking social engineering.</li>
                     </ul>
                 </div>
             </div>
@@ -444,11 +499,16 @@
             <!-- Module 4 -->
             <div class="module-card bg-right">
                 <div class="module-content" style="order: 1;">
-                    <h3><a href="/course/module-4" style="color: inherit; text-decoration: none; border-bottom: none;">AI in Cybersecurity: Mobile APK Analysis</a></h3>
+                    <h3><a href="/course/module-4"
+                            style="color: inherit; text-decoration: none; border-bottom: none;" data-i18n="m4_title">AI in Cybersecurity:
+                            Mobile APK Analysis</a></h3>
                     <ul>
-                        <li><strong>Reverse Engineering:</strong> Decompiling Android apps using tools like `apktool` and `jadx`.</li>
-                        <li><strong>Manifest Analysis:</strong> Using AI to flag anomalous or dangerous permissions automatically.</li>
-                        <li><strong>Code Review & Secrets:</strong> AI-assisted hunting for hardcoded credentials, malicious snippets, and API keys.</li>
+                        <li data-i18n="m4_li1"><strong>Reverse Engineering:</strong> Decompiling Android apps using tools like `apktool`
+                            and `jadx`.</li>
+                        <li data-i18n="m4_li2"><strong>Manifest Analysis:</strong> Using AI to flag anomalous or dangerous permissions
+                            automatically.</li>
+                        <li data-i18n="m4_li3"><strong>Code Review & Secrets:</strong> AI-assisted hunting for hardcoded credentials,
+                            malicious snippets, and API keys.</li>
                     </ul>
                 </div>
                 <div class="module-number" style="order: 2;">04</div>
@@ -458,11 +518,16 @@
             <div class="module-card">
                 <div class="module-number">05</div>
                 <div class="module-content">
-                    <h3><a href="/course/module-5" style="color: inherit; text-decoration: none; border-bottom: none;">Custom Deployed AI Solutions</a></h3>
+                    <h3><a href="/course/module-5"
+                            style="color: inherit; text-decoration: none; border-bottom: none;" data-i18n="m5_title">Custom Deployed AI
+                            Solutions</a></h3>
                     <ul>
-                        <li><strong>RAG Interfaces:</strong> Understanding application-specific AI deployments.</li>
-                        <li><strong>Practical Analysis:</strong> Interacting with specialized, sandboxed AI deployments safely.</li>
-                        <li><strong>Hands-on Lab:</strong> Exploring <a href="https://cybersentry-687004561094.us-central1.run.app" target="_blank">Thana GPT</a> running on Google Cloud Run.</li>
+                        <li data-i18n="m5_li1"><strong>RAG Interfaces:</strong> Understanding application-specific AI deployments.</li>
+                        <li data-i18n="m5_li2"><strong>Practical Analysis:</strong> Interacting with specialized, sandboxed AI deployments
+                            safely.</li>
+                        <li data-i18n="m5_li3"><strong>Hands-on Lab:</strong> Exploring <a
+                                href="https://cybersentry-687004561094.us-central1.run.app" target="_blank">Thana
+                                GPT</a> running on Google Cloud Run.</li>
                     </ul>
                 </div>
             </div>
@@ -498,16 +563,17 @@
             const typewriterObj = document.getElementById('typewriter');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if(entry.isIntersecting) {
+                    if (entry.isIntersecting) {
                         typewriterObj.innerHTML = "Tracing API calls...\n[ALERT] Hardcoded AWS Credentials found at 0x4F12A.\n[WARNING] Suspicious network request to ru-cdn-malicious.xyz block detected.\n>> Generating mitigation playbook...";
                         typewriterObj.style.animation = "typing 3.5s steps(40, end) forwards, blink 0.75s step-end infinite";
                         observer.unobserve(entry.target);
                     }
                 });
             }, { threshold: 0.5 });
-            
+
             observer.observe(document.querySelector('.terminal-container'));
         });
     </script>
 </body>
+
 </html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="nav_dashboard">← कोर्स डैशबोर्ड</string>
+    <string name="nav_module">मॉड्यूल</string>
+    <string name="nav_prev">← पिछला</string>
+    <string name="nav_next">अगला मॉड्यूल →</string>
+    <string name="nav_finish">कोर्स समाप्त करें 🎉</string>
+    
+    <string name="hero_tagline">व्यापक मास्टरक्लास</string>
+    <string name="hero_title">AI का उपयोग करके&lt;br&gt;साइबर अपराध सुलझाना</string>
+    <string name="hero_enter">कोर्स में प्रवेश करें</string>
+    
+    <string name="curr_title">कोर्स पाठ्यक्रम</string>
+    <string name="sidebar_title">कोर्स मॉड्यूल</string>
+    <string name="hero_desc">भविष्य के उपकरणों में महारत हासिल करें। विसंगतियों का पता लगाने, दुर्भावनापूर्ण कोड का विश्लेषण करने और मशीन की गति से घटना प्रतिक्रिया में तेजी लाने के लिए लार्ज लैंग्वेज मॉडल (LLMs) का उपयोग करें।</string>
+    <string name="hero_coming_soon">प्लेटफ़ॉर्म जल्द आ रहा है</string>
+    <string name="curr_subtitle">गहन एंड-टू-एंड मॉड्यूल जो AI बुनियादी ढांचे से लेकर व्यावहारिक SOC हथियारकरण तक सब कुछ कवर करते हैं।</string>
+
+    <string name="m1_title">AI और लार्ज लैंग्वेज मॉडल्स (LLMs) का परिचय</string>
+    <string name="m1_li1">&lt;strong&gt;बुनियादी बातें:&lt;/strong&gt; AI, मशीन लर्निंग (ML) और डीप लर्निंग (DL) का अवलोकन।</string>
+    <string name="m1_li2">&lt;strong&gt;जेनरेटिव AI और LLMs:&lt;/strong&gt; मॉडल टेक्स्ट, टोकन, कॉन्टेक्स्ट विंडो और ट्रांसफॉर्मर को कैसे प्रोसेस करते हैं।</string>
+    <string name="m1_li3">&lt;strong&gt;प्रॉम्प्ट इंजीनियरिंग की बुनियादी बातें:&lt;/strong&gt; AI मॉडल के साथ प्रभावी ढंग से संवाद करने के तरीके।</string>
+
+    <string name="m2_title">फ्रंटियर AI मॉडल और कस्टम असिस्टेंट</string>
+    <string name="m2_li1">&lt;strong&gt;नवीनतम फ्लैगशिप मॉडल:&lt;/strong&gt; विश्लेषण के लिए ChatGPT (GPT-5.4), Gemini (3.1 Pro), और Grok (Grok 4.20) में महारत हासिल करना।</string>
+    <string name="m2_li2">&lt;strong&gt;NotebookLM:&lt;/strong&gt; केस फ़ाइलों, FIR और लॉग्स को अपलोड करके तुरंत सुलभ ऑडियो ओवरव्यू और AI पूछताछ बनाना।</string>
+    <string name="m2_li3">&lt;strong&gt;कस्टम GPT और Gems:&lt;/strong&gt; विशिष्ट साइबर रक्षा कार्यों के लिए व्यक्तिगत और विशेष AI एजेंट बनाना।</string>
+
+    <string name="m3_title">डीपफेक और AI-सहायता प्राप्त पहचान</string>
+    <string name="m3_li1">&lt;strong&gt;डीपफेक को समझना:&lt;/strong&gt; कैसे AI-जनित फेस स्वैप और वॉयस क्लोनिंग को साइबर अपराध में हथियार बनाया जाता है।</string>
+    <string name="m3_li2">&lt;strong&gt;दृश्य विसंगतियाँ:&lt;/strong&gt; अस्वाभाविक पलक झपकना, प्रकाश की विसंगतियाँ और धुंधले किनारों जैसी कलाकृतियों को पहचानने के आसान तरीके।</string>
+    <string name="m3_li3">&lt;strong&gt;AI डिटेक्शन टूल्स:&lt;/strong&gt; मीडिया प्रामाणिकता को सत्यापित करने और उत्पत्ति का पता लगाने के लिए सुलभ, गैर-तकनीकी AI टूल का उपयोग करना।</string>
+
+    <string name="m4_title">मोबाइल ऐप (APK) विश्लेषण</string>
+    <string name="m4_li1">&lt;strong&gt;अनज़िप ट्रिक:&lt;/strong&gt; विशेष सॉफ़्टवेयर के बिना छिपी हुई सामग्री निकालने के लिए Android .apk फ़ाइल का नाम बदलकर .zip कैसे करें।</string>
+    <string name="m4_li2">&lt;strong&gt;कोड का विश्लेषण:&lt;/strong&gt; तत्काल मैलवेयर विश्लेषण के लिए निकाली गई फ़ाइलों को सीधे Gemini पर अपलोड करना।</string>
+    <string name="m4_li3">&lt;strong&gt;खतरों की पहचान करना:&lt;/strong&gt; स्पाईवेयर, छिपे हुए API और दुर्भावनापूर्ण अनुमतियों का पता लगाने के लिए AI को संकेत देना।</string>
+
+    <string name="m5_title">IndiaAI मिशन और Sarvam</string>
+    <string name="m5_li1">&lt;strong&gt;संप्रभु AI (Sovereign AI):&lt;/strong&gt; स्वदेशी कंप्यूटिंग शक्ति और डेटासेट बनाने के लिए IndiaAI मिशन के लक्ष्य की खोज।</string>
+    <string name="m5_li2">&lt;strong&gt;Sarvam AI:&lt;/strong&gt; भारतीय भाषाओं के लिए बनाए गए भारत के मूलभूत मॉडल (Sarvam-105B) को समझना।</string>
+    <string name="m5_li3">&lt;strong&gt;कानून प्रवर्तन उपयोग के मामले:&lt;/strong&gt; क्षेत्रीय ध्वनि नोट्स का अनुवाद करना और मूल भाषा में साइबर अपराध FIR का विश्लेषण करना।</string>
+</resources>

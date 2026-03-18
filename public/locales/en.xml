@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="nav_dashboard">← Course Dashboard</string>
+    <string name="nav_module">Module</string>
+    <string name="nav_prev">← Previous</string>
+    <string name="nav_next">Next Module →</string>
+    <string name="nav_finish">Finish Course 🎉</string>
+    
+    <string name="hero_tagline">Comprehensive Masterclass</string>
+    <string name="hero_title">Solving Cyber Crime&lt;br&gt;Using AI</string>
+    <string name="hero_enter">Enter the Course</string>
+    
+    <string name="curr_title">Course Curriculum</string>
+    <string name="sidebar_title">Course Modules</string>
+    <string name="hero_desc">Master the tools of the future. Harness Large Language Models to detect anomalies, analyze malicious code, and accelerate incident response at machine speed.</string>
+    <string name="hero_coming_soon">Platform Coming Soon</string>
+    <string name="curr_subtitle">Deep end-to-end modules covering everything from AI fundamentals to practical SOC weaponization.</string>
+    
+    <string name="m1_title">Introduction to AI and Large Language Models</string>
+    <string name="m1_li1">&lt;strong&gt;Fundamentals:&lt;/strong&gt; Overview of AI, Machine Learning (ML), and Deep Learning (DL).</string>
+    <string name="m1_li2">&lt;strong&gt;Generative AI &amp; LLMs:&lt;/strong&gt; How models process text, tokens, context windows, and transformers.</string>
+    <string name="m1_li3">&lt;strong&gt;Prompt Engineering Basics:&lt;/strong&gt; Best practices for communicating effectively with AI models.</string>
+
+    <string name="m2_title">Frontier AI Models &amp; Custom Assistants</string>
+    <string name="m2_li1">&lt;strong&gt;Latest Flagship Models:&lt;/strong&gt; Mastering ChatGPT (GPT-5.4), Gemini (3.1 Pro), and Grok (Grok 4.20) for analysis.</string>
+    <string name="m2_li2">&lt;strong&gt;NotebookLM:&lt;/strong&gt; Uploading case files, FIRs, and logs to create instantly accessible audio overviews and AI investigations.</string>
+    <string name="m2_li3">&lt;strong&gt;Custom GPTs &amp; Gems:&lt;/strong&gt; Building personalized, specialized AI agents pre-prompted for specific cyber defense tasks.</string>
+
+    <string name="m3_title">Deepfakes &amp; AI-Assisted Detection</string>
+    <string name="m3_li1">&lt;strong&gt;Understanding Deepfakes:&lt;/strong&gt; How AI-generated face swaps and voice cloning are weaponized in cybercrime.</string>
+    <string name="m3_li2">&lt;strong&gt;Visual Anomalies:&lt;/strong&gt; Easy ways to spot artifacts like unnatural blinking, lighting inconsistencies, and blurred edges.</string>
+    <string name="m3_li3">&lt;strong&gt;AI Detection Tools:&lt;/strong&gt; Using accessible, non-technical AI tools to verify media authenticity and trace origins.</string>
+
+    <string name="m4_title">Mobile App (APK) Analysis</string>
+    <string name="m4_li1">&lt;strong&gt;The Unzip Trick:&lt;/strong&gt; How to rename an Android .apk file to .zip to extract its hidden contents without specialized software.</string>
+    <string name="m4_li2">&lt;strong&gt;Analyzing the Code:&lt;/strong&gt; Uploading extracted files (like AndroidManifest.xml or scripts) directly to Gemini for instant malware analysis.</string>
+    <string name="m4_li3">&lt;strong&gt;Identifying Threats:&lt;/strong&gt; Prompting AI to detect spyware, hidden APIs, tracking domains, and malicious permissions.</string>
+
+    <string name="m5_title">IndiaAI Mission &amp; Sarvam</string>
+    <string name="m5_li1">&lt;strong&gt;Sovereign AI:&lt;/strong&gt; Exploring the IndiaAI Mission\'s goal to build indigenous computing power and datasets.</string>
+    <string name="m5_li2">&lt;strong&gt;Sarvam AI:&lt;/strong&gt; Understanding India\'s foundational models (Sarvam-105B) built for Indic languages.</string>
+    <string name="m5_li3">&lt;strong&gt;Law Enforcement Use Cases:&lt;/strong&gt; Translating regional voice notes and analyzing native-language cybercrime FIRs.</string>
+</resources>
